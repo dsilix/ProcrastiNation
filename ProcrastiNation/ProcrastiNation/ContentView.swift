@@ -17,7 +17,7 @@ struct ContentView: View {
         let id = UUID()
     }
     private var oceans = [
-        Task(name: "Prova3"),
+        Task(name: "Prova4"),
         Task(name: "Read the 13/11 search"),
         Task(name: "Start Latin"),
         Task(name: "Studying the 9/11 workshop"),
