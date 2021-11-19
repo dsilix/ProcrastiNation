@@ -14,6 +14,22 @@
 		4A6ECF8B2742ACC10097A981 /* ProcrastiNationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6ECF8A2742ACC10097A981 /* ProcrastiNationTests.swift */; };
 		4A6ECF952742ACC10097A981 /* ProcrastiNationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6ECF942742ACC10097A981 /* ProcrastiNationUITests.swift */; };
 		4A6ECF972742ACC10097A981 /* ProcrastiNationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6ECF962742ACC10097A981 /* ProcrastiNationUITestsLaunchTests.swift */; };
+		4AA6C5322747E91C002DF720 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C5312747E91C002DF720 /* Menu.swift */; };
+		4AA6C5342747E9AD002DF720 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C5332747E9AD002DF720 /* Todo.swift */; };
+		4AA6C5362747E9D5002DF720 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C5352747E9D5002DF720 /* MainScreen.swift */; };
+		4AA6C5382747E9FD002DF720 /* NewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C5372747E9FD002DF720 /* NewItem.swift */; };
+		4AA6C53A2747EA16002DF720 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C5392747EA16002DF720 /* Settings.swift */; };
+		4AA6C53C2747EA32002DF720 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C53B2747EA32002DF720 /* Persistence.swift */; };
+		4AA6C53F2747EA65002DF720 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C53E2747EA65002DF720 /* Categories.swift */; };
+		4AA6C5412747EA81002DF720 /* ViewContextMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C5402747EA81002DF720 /* ViewContextMethods.swift */; };
+		4AA6C5432747EA9E002DF720 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C5422747EA9E002DF720 /* Haptics.swift */; };
+		4AA6C5452747EAB8002DF720 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C5442747EAB8002DF720 /* Screen.swift */; };
+		4AA6C5472747EAD4002DF720 /* GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C5462747EAD4002DF720 /* GestureRecognizer.swift */; };
+		4AA6C54A2747EB0D002DF720 /* CategoryCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C5492747EB0D002DF720 /* CategoryCards.swift */; };
+		4AA6C54C2747EBF5002DF720 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C54B2747EBF5002DF720 /* Collection.swift */; };
+		4AA6C54F2747EC75002DF720 /* ProcrastiNation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C54D2747EC75002DF720 /* ProcrastiNation.xcdatamodeld */; };
+		4AA6C5502747EC75002DF720 /* ProcrastiNation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C54D2747EC75002DF720 /* ProcrastiNation.xcdatamodeld */; };
+		4AA6C5512747EC75002DF720 /* ProcrastiNation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6C54D2747EC75002DF720 /* ProcrastiNation.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +60,20 @@
 		4A6ECF902742ACC10097A981 /* ProcrastiNationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProcrastiNationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6ECF942742ACC10097A981 /* ProcrastiNationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcrastiNationUITests.swift; sourceTree = "<group>"; };
 		4A6ECF962742ACC10097A981 /* ProcrastiNationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcrastiNationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AA6C5312747E91C002DF720 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		4AA6C5332747E9AD002DF720 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		4AA6C5352747E9D5002DF720 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		4AA6C5372747E9FD002DF720 /* NewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItem.swift; sourceTree = "<group>"; };
+		4AA6C5392747EA16002DF720 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4AA6C53B2747EA32002DF720 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4AA6C53E2747EA65002DF720 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		4AA6C5402747EA81002DF720 /* ViewContextMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContextMethods.swift; sourceTree = "<group>"; };
+		4AA6C5422747EA9E002DF720 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		4AA6C5442747EAB8002DF720 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		4AA6C5462747EAD4002DF720 /* GestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizer.swift; sourceTree = "<group>"; };
+		4AA6C5492747EB0D002DF720 /* CategoryCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCards.swift; sourceTree = "<group>"; };
+		4AA6C54B2747EBF5002DF720 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		4AA6C54E2747EC75002DF720 /* TodoAppSwiftUI3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoAppSwiftUI3.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +124,17 @@
 		4A6ECF782742ACBF0097A981 /* ProcrastiNation */ = {
 			isa = PBXGroup;
 			children = (
+				4AA6C5312747E91C002DF720 /* Menu.swift */,
+				4AA6C5392747EA16002DF720 /* Settings.swift */,
+				4AA6C53B2747EA32002DF720 /* Persistence.swift */,
 				4A6ECF792742ACBF0097A981 /* ProcrastiNationApp.swift */,
+				4AA6C5372747E9FD002DF720 /* NewItem.swift */,
+				4AA6C5332747E9AD002DF720 /* Todo.swift */,
+				4AA6C5352747E9D5002DF720 /* MainScreen.swift */,
 				4A6ECF7B2742ACBF0097A981 /* ContentView.swift */,
+				4AA6C54B2747EBF5002DF720 /* Collection.swift */,
 				4A6ECF7D2742ACC10097A981 /* Assets.xcassets */,
+				4AA6C53D2747EA48002DF720 /* Models */,
 				4A6ECF7F2742ACC10097A981 /* Preview Content */,
 			);
 			path = ProcrastiNation;
@@ -123,8 +161,30 @@
 			children = (
 				4A6ECF942742ACC10097A981 /* ProcrastiNationUITests.swift */,
 				4A6ECF962742ACC10097A981 /* ProcrastiNationUITestsLaunchTests.swift */,
+				4AA6C5482747EAE6002DF720 /* ViewModels */,
 			);
 			path = ProcrastiNationUITests;
+			sourceTree = "<group>";
+		};
+		4AA6C53D2747EA48002DF720 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4AA6C53E2747EA65002DF720 /* Categories.swift */,
+				4AA6C5402747EA81002DF720 /* ViewContextMethods.swift */,
+				4AA6C5422747EA9E002DF720 /* Haptics.swift */,
+				4AA6C5442747EAB8002DF720 /* Screen.swift */,
+				4AA6C5462747EAD4002DF720 /* GestureRecognizer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4AA6C5482747EAE6002DF720 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4AA6C5492747EB0D002DF720 /* CategoryCards.swift */,
+				4AA6C54D2747EC75002DF720 /* ProcrastiNation.xcdatamodeld */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +317,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA6C5322747E91C002DF720 /* Menu.swift in Sources */,
+				4AA6C53C2747EA32002DF720 /* Persistence.swift in Sources */,
+				4AA6C5432747EA9E002DF720 /* Haptics.swift in Sources */,
+				4AA6C54A2747EB0D002DF720 /* CategoryCards.swift in Sources */,
+				4AA6C54F2747EC75002DF720 /* ProcrastiNation.xcdatamodeld in Sources */,
+				4AA6C5382747E9FD002DF720 /* NewItem.swift in Sources */,
 				4A6ECF7C2742ACBF0097A981 /* ContentView.swift in Sources */,
+				4AA6C54C2747EBF5002DF720 /* Collection.swift in Sources */,
+				4AA6C5362747E9D5002DF720 /* MainScreen.swift in Sources */,
+				4AA6C53F2747EA65002DF720 /* Categories.swift in Sources */,
+				4AA6C53A2747EA16002DF720 /* Settings.swift in Sources */,
+				4AA6C5412747EA81002DF720 /* ViewContextMethods.swift in Sources */,
 				4A6ECF7A2742ACBF0097A981 /* ProcrastiNationApp.swift in Sources */,
+				4AA6C5342747E9AD002DF720 /* Todo.swift in Sources */,
+				4AA6C5452747EAB8002DF720 /* Screen.swift in Sources */,
+				4AA6C5472747EAD4002DF720 /* GestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA6C5502747EC75002DF720 /* ProcrastiNation.xcdatamodeld in Sources */,
 				4A6ECF8B2742ACC10097A981 /* ProcrastiNationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6ECF952742ACC10097A981 /* ProcrastiNationUITests.swift in Sources */,
+				4AA6C5512747EC75002DF720 /* ProcrastiNation.xcdatamodeld in Sources */,
 				4A6ECF972742ACC10097A981 /* ProcrastiNationUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +503,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +533,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +683,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4AA6C54D2747EC75002DF720 /* ProcrastiNation.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4AA6C54E2747EC75002DF720 /* TodoAppSwiftUI3.xcdatamodel */,
+			);
+			currentVersion = 4AA6C54E2747EC75002DF720 /* TodoAppSwiftUI3.xcdatamodel */;
+			path = ProcrastiNation.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4A6ECF6E2742ACBF0097A981 /* Project object */;
 }
