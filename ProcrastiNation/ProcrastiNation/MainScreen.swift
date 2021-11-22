@@ -148,7 +148,7 @@ struct MainScreen: View {
                                         return
                                     }
                                 }) {
-                                    Image(systemName: "plus.circle.fill")
+                                    Image(systemName: "")
                                         .resizable()
                                         .frame(width: 70, height: 70)
                                         .foregroundColor(.indigo)

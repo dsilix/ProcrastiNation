@@ -140,10 +140,10 @@ struct NewItem: View {
                             newItemOpen = false
                         }
                     }) {
-                        Image(systemName: "xmark.circle.fill")
+                        Image(systemName: "x.square")
                             .resizable()
-                            .frame(width: 60, height: 60)
-                            .foregroundColor(.indigo)
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(Color(uiColor: .gray))
                             .shadow(color: .indigo.opacity(0.3), radius: 10, x: 0, y: 10)
                             .padding()
                     }
