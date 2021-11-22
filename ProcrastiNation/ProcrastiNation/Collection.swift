@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 //CLASSE CHE GESTISCE IL PUNTEGGIO.
 class punti {
     var punteggio : Int
@@ -33,6 +34,10 @@ class punti {
         monster8.appear()}
     if punteggio>=900{
         monster9.appear()}
+    }
+    
+    func aumentaPunteggio(){
+        self.punteggio+=1000
     }
 }
 
@@ -64,11 +69,13 @@ var monster7 = monster(imageMonster: "7", opac: 0, dim:0.2)
 var monster8 = monster(imageMonster: "8", opac: 0, dim:0.2)
 var monster9 = monster(imageMonster: "9", opac: 0, dim:0.2)
 
-//INIZIALIZZO LA VARIABILE PUNTEGGIO
-var points = punti(punteggio: 1000)
+
+var points = punti(punteggio: 0)
 
 struct Collection: View {
     
+   
+  
     //CREO TRE COLONNE PER LA LAZYGRID
     let columns = [
         GridItem(.flexible()),
@@ -78,20 +85,13 @@ struct Collection: View {
     
   //FACCIO IL CONTROLLO DEL PUNTEGGIO PER SBLOCCARE I MOSTRI DELLA COLLEZIONE
     init(){
+        
         points.checkPunteggio()
         
     }
 
     var body: some View {
        
-//
-//        VStack{
-//
-//
-//
-//
-//        } //:VStack
-        
         //ARRAY OGGETTI MOSTRO
         let mostri = [monster1,
                       monster2,
@@ -104,6 +104,7 @@ struct Collection: View {
                       monster9]
         ZStack{
             VStack{
+            
             Text("Collection").bold()
             .font(.largeTitle)
             .foregroundColor(Color.gray)

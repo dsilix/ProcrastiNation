@@ -13,7 +13,7 @@ struct NewItem: View {
     
     var namespace: Namespace.ID
     
-    @State private var category = "Business"
+    @State private var category = "Alta"
     @State private var dueDate = Date()
     @State private var toDoText = ""
     
@@ -101,6 +101,7 @@ struct NewItem: View {
                     
                     
                     Button(role: .none, action: {
+                        
                         ViewContextMethods.addItem(context: viewContext, dueDate: dueDate, toDoText: toDoText, category: category)
                         withAnimation {
                             newItemOpen = false
@@ -168,7 +169,7 @@ struct NewItem: View {
                 $0.category == categoryChosen
             }
         }
-        return category[0].color
+        return Color.gray
     }
     
 }

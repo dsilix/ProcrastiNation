@@ -12,23 +12,24 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            Menu()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
+           
             ToDoList()
                 .tabItem {
                     Image(systemName: "list.bullet.circle.fill")
                     Text("Todos")
                 }
+            Menu()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                }
             Collection()
                 .tabItem {
-                    Image(systemName: "list.bullet.circle.fill")
+                    Image(systemName: "book.fill")
                     Text("Collection")
                 }
         }
-        .accentColor(Color.indigo)
+        .accentColor(Color.orange)
     }
 }
 

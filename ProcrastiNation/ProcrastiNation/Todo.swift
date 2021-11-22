@@ -121,7 +121,7 @@ struct ToDoList: View {
                 $0.category == toDoItem.category
             }
         }
-        return category[0].color
+        return Color.cyan
     }
     
     

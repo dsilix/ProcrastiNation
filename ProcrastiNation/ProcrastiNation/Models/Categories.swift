@@ -16,7 +16,7 @@ struct ItemCategory: Identifiable, Hashable {
 }
 
 let categories = [
-    ItemCategory(category: "Business", color: Color.cyan),
-    ItemCategory(category: "Personal", color: Color.indigo),
-    ItemCategory(category: "Other", color: Color.mint)
+    ItemCategory(category: "High", color: Color.red),
+    ItemCategory(category: "Medium", color: Color.yellow),
+    ItemCategory(category: "Low", color: Color.green)
 ]

@@ -15,9 +15,7 @@ struct Menu: View {
             
             if menuOpen {
                 ZStack {
-                    Image("menuWallpaper")
-                        .resizable()
-                        .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+                  
                     
                     VStack {
                         

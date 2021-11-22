@@ -17,7 +17,7 @@ struct PersistenceController {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
             newItem.dueDate = Date()
-            newItem.category = "Business"
+            newItem.category = "Alta"
             newItem.toDoText = "You need to do this task in order to proceed with the next one"
         }
         do {

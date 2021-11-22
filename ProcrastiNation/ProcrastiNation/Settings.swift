@@ -12,6 +12,7 @@ struct Settings: View {
     @FocusState private var userNameIsFocused: Bool
     @Environment(\.dismiss) private var dismiss
     @AppStorage("userName") var username = ""
+
     
     var body: some View {
         

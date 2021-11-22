@@ -30,8 +30,8 @@ struct MainScreen: View {
     @Binding var menuOpen: Bool
     
     
-    @AppStorage("userName") var userName = ""
-    
+//    @AppStorage("userName") var userName = ""
+//
     var body: some View {
         ZStack {
             if !newItemOpen {
@@ -40,7 +40,7 @@ struct MainScreen: View {
                         ScrollView {
                             VStack {
                                 HStack {
-                                    Text("Categories")
+                                    Text("Priority")
                                         .font(.body.smallCaps())
                                         .foregroundColor(.secondary)
                                     Spacer()
@@ -66,6 +66,7 @@ struct MainScreen: View {
                                 
                             }
                             .padding(.top, 30)
+                            .background(Color("customBlack"))
                             
                             // MARK: Actual list of todo items
                             VStack {
@@ -89,8 +90,10 @@ struct MainScreen: View {
                                                         .foregroundColor(getCategoryColor(toDoItem: toDoItem))
                                                         .frame(width: 30, height: 30)
                                                         .onTapGesture {
+                                                            
                                                             withAnimation {
                                                                 ViewContextMethods.isDone(item: toDoItem, context: viewContext)
+                                                                
                                                             }
                                                         }
                                                         .padding(.leading, 20)
@@ -130,9 +133,10 @@ struct MainScreen: View {
                                             .foregroundColor(.secondary)
                                     }
                                     .frame(height: 200)
+                                    
                                 }
                             }
-                        }
+                        }.background(Color("customBlack")).opacity(1)
                         
                         // MARK: Bottom button to add new item
                         VStack{
@@ -141,7 +145,7 @@ struct MainScreen: View {
                                 Spacer()
                                 Button(action: {
                                     withAnimation {
-                                        newItemOpen.toggle()
+                                        return
                                     }
                                 }) {
                                     Image(systemName: "plus.circle.fill")
@@ -155,33 +159,36 @@ struct MainScreen: View {
                             .matchedGeometryEffect(id: "button", in: namespace)
                         }
                     }
-                    .navigationTitle(userName.isEmpty ? "Hi there!" : "What's up, \(userName)!")
+                    .navigationTitle("Hello!")
+                   
+                    
                     
                     // MARK: Navigation bar buttons to open different menus
                     .navigationBarItems(
                         
-                        
+                        //JHHJJHJJJJJJHHHHBHDABJHSBDABSDLJASLDALSDLABSLDALSDLASBDLJHABSLDHALSDALSDLBBBBB
                         leading: Button(action: {
                         withAnimation {
-                            menuOpen.toggle()
+                            
                         }
-                        Haptics.giveSmallHaptic()
+                        
+                        //Haptics.giveSmallHaptic()
                     })
                         {
-                        Image(systemName: "rectangle.portrait.leftthird.inset.filled")
-                            .foregroundColor(Color.indigo)
+                        Image("")
+                            .foregroundColor(Color.gray)
                     }
                             .buttonStyle(PlainButtonStyle()),
                         trailing: Button(action: {
                         withAnimation {
-                            settingsOpen.toggle()
+                            newItemOpen.toggle()
                         }
                         Haptics.giveSmallHaptic()
                     }) {
-                        Image(systemName: "gear.circle.fill")
+                        Image(systemName: "plus")
                             .resizable()
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(Color.indigo)
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(Color.orange)
                             
                     }
                             .buttonStyle(PlainButtonStyle())
@@ -204,7 +211,7 @@ struct MainScreen: View {
             }
         }
         
-        return category[0].color
+        return Color.gray
     }
     
     func getTotalTasksNumber(category: ItemCategory) -> Int {
