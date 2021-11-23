@@ -12,7 +12,7 @@ struct NewItem: View {
     
     var namespace: Namespace.ID
     
-    @State private var category = "Alta"
+    @State private var category = ""
     @State private var dueDate = Date()
     @State private var toDoText = ""
     

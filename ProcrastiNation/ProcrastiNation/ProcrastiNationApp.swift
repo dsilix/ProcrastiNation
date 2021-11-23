@@ -18,7 +18,11 @@ struct ProcrastiNationApp: App {
                 .onAppear(perform: {
                     landingopacity = 0.0
                 })
-                .overlay(LandingView().opacity(landingopacity)).animation(Animation.easeOut.delay(0.0))
+                .overlay(LandingView()
+                            .opacity(landingopacity)
+                            .animation(Animation.easeOut.delay(1.0))
+                )
+            
                 
         }
     }

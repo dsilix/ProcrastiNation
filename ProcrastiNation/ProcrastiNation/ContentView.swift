@@ -9,25 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var selectedItem = 1
     
     var body: some View {
-        TabView {
-           
+        TabView(selection: $selectedItem) {
             ToDoList()
                 .tabItem {
                     Image(systemName: "list.bullet.circle.fill")
                     Text("Todos")
-                }
+                }.tag(0)
             Menu()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
-                }
+                }.tag(1)
             Collection()
                 .tabItem {
                     Image(systemName: "book.fill")
                     Text("Collection")
-                }
+                }.tag(2)
         }
         .accentColor(Color.orange)
     }
