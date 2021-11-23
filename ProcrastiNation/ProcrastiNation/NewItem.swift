@@ -133,6 +133,7 @@ DatePicker(selection: $dueDate, displayedComponents: .date) {
 //                            .resizable()
 //                            .frame(width: 20, height: 20)
 //                            .foregroundColor(Color(uiColor: .systemIndigo))
+                            .tint(.blue)
 //                            .shadow(color: .indigo.opacity(0.3), radius: 10, x: 0, y: 10)
 //                            .padding()
                     }.padding()
@@ -153,7 +154,7 @@ DatePicker(selection: $dueDate, displayedComponents: .date) {
                         
                     })
                     //    .buttonStyle(BorderedButtonStyle)
-                        .tint(.blue)
+                        .tint(.orange)
 //                        .controlProminence(.increased)
                         .controlSize(.large)
                         .shadow(color: Color.black.opacity(0.1), radius: 20, x: 5, y: 10)
