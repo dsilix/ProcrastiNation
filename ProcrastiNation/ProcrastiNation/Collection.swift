@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 //CLASSE CHE GESTISCE IL PUNTEGGIO.
 class punti {
     var punteggio : Int
@@ -15,23 +16,57 @@ class punti {
     }
     //FUNZIONE PER IL CHECK DEI PUNTI.SE IL PUNTEGGIO è >= X IL MOSTRO Y APPARE
     func checkPunteggio(){
+        
     if punteggio>=100 {
-        monster1.appear()}
+        monster1.appear()
+        
+        monster2.uovo()
+        monster3.uovo()
+        monster4.uovo()
+        monster5.uovo()
+        monster6.uovo()
+        monster7.uovo()
+        monster8.uovo()
+        monster9.uovo()
+    }
+        
     if punteggio>=200{
-        monster2.appear()}
+        monster2.appear()
+        monster2.imageMonster = "2"
+        
+       
+    }
     if punteggio>=300{
-        monster3.appear()}
+        monster3.appear()
+        monster3.imageMonster = "3"
+      }
     if punteggio>=400{
-        monster4.appear()}
+        monster4.appear()
+        monster4.imageMonster = "4"
+     
+    }
     if punteggio>=500{
-        monster5.appear()}
+        monster5.imageMonster = "5"
+        monster5.appear()
+        
+    }
     if punteggio>=600{
-        monster6.appear()}
+        monster6.imageMonster = "6"
+        monster6.appear()
+       
+    }
     if punteggio>=700{
-        monster7.appear()}
+        monster7.imageMonster = "7"
+        monster7.appear()
+       
+    }
     if punteggio>=800{
-        monster8.appear()}
+        monster8.imageMonster = "8"
+        monster8.appear()
+       
+    }
     if punteggio>=900{
+        monster9.imageMonster = "9"
         monster9.appear()}
     }
     
@@ -46,37 +81,48 @@ class monster {
     var imageMonster : String
     var opac : Double
     var dim : Double
-    init(imageMonster: String, opac: Double, dim: Double){
+    var on1: Bool
+    init(imageMonster: String, opac: Double, dim: Double, on1: Bool){
         self.imageMonster = imageMonster
         self.opac = opac
         self.dim = dim
+        self.on1 = on1
     }
     //FUNZIONE APPARI CHE USIAMO NELLA CLASSE PUNTEGGIO
     func appear(){
-        opac = 1.0;
+        opac = 1.0
+        on1 = true
+        
+    }
+    func uovo(){
+        if self.on1 == false {
+            self.imageMonster = "9"
+            self.opac=1.0
+        }
+        else{
+            return
+        }
     }
 }
 
 //VENGONO CREATI I 9 OGGETTI MOSTRO
-var monster1 = monster(imageMonster: "1", opac: 0, dim:0.2)
-var monster2 = monster(imageMonster: "2", opac: 0, dim:0.2)
-var monster3 = monster(imageMonster: "3", opac: 0, dim:0.2)
-var monster4 = monster(imageMonster: "4", opac: 0, dim:0.2)
-var monster5 = monster(imageMonster: "5", opac: 0, dim:0.2)
-var monster6 = monster(imageMonster: "6", opac: 0, dim:0.2)
-var monster7 = monster(imageMonster: "7", opac: 0, dim:0.2)
-var monster8 = monster(imageMonster: "8", opac: 0, dim:0.2)
-var monster9 = monster(imageMonster: "9", opac: 0, dim:0.2)
+var monster1 = monster(imageMonster: "1", opac: 0, dim:0.2, on1: false)
+var monster2 = monster(imageMonster: "2", opac: 0, dim:0.2, on1: false)
+var monster3 = monster(imageMonster: "3", opac: 0, dim:0.2, on1: false)
+var monster4 = monster(imageMonster: "4", opac: 0, dim:0.2, on1: false)
+var monster5 = monster(imageMonster: "5", opac: 0, dim:0.2, on1: false)
+var monster6 = monster(imageMonster: "6", opac: 0, dim:0.2, on1: false)
+var monster7 = monster(imageMonster: "7", opac: 0, dim:0.2, on1: false)
+var monster8 = monster(imageMonster: "8", opac: 0, dim:0.2, on1: false)
+var monster9 = monster(imageMonster: "9", opac: 0, dim:0.2, on1: false)
 
 
 
 
 struct Collection: View {
-    
-   
-    
-    
-    var points = punti(punteggio: 0)
+
+    @State var verticaloffsetmonster = 2.0
+    var points = punti(punteggio: 100)
     //CREO TRE COLONNE PER LA LAZYGRID
     let columns = [
         GridItem(.flexible()),
@@ -111,7 +157,9 @@ struct Collection: View {
             .foregroundColor(Color.gray)
             .font(.system(size: 33.0))
            // .padding(.leading)
-            }
+            }.onAppear(perform: {
+                verticaloffsetmonster = -2.0
+            })
             
             //COLORE SFONDO
             Color.white.ignoresSafeArea()
@@ -123,7 +171,9 @@ struct Collection: View {
                     Image(mostri[index].imageMonster)
                         .scaleEffect(mostri[index].dim)
                         .opacity(mostri[index].opac)
-                        .padding(-120)
+                        .padding(-104)
+                        .offset(y: verticaloffsetmonster)
+                        .animation(Animation.linear.repeatForever())
                 }
                 
             }
@@ -134,8 +184,8 @@ struct Collection: View {
             LazyVGrid(columns: columns, spacing: 0){
                 ForEach(0..<9) { index in
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color.white).frame(width: 90, height: 90)
-                        .shadow(radius: 10)
+                        .foregroundColor(Color("customOrange")).opacity(0.6).frame(width: 120, height: 120)
+//                        .shadow(radius: 10)
                        .padding(75)
                 }
             }

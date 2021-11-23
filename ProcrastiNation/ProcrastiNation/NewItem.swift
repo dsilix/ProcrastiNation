@@ -26,6 +26,10 @@ struct NewItem: View {
             
             ScrollView {
                 VStack {
+                    Text("Priority")
+                        .font(.body.smallCaps())
+                        .foregroundColor(.secondary)
+                        
                     Picker(selection: $category,
                            label:
                             Text("\(category)")
@@ -52,13 +56,14 @@ struct NewItem: View {
                             .shadow(color: .black.opacity(0.1), radius: 1, x: 1, y: 1)
                             .shadow(color: .white.opacity(1), radius: 5, x: -1, y: -1)
                     ) {
+                        
                         ForEach(categories, id: \.self) {
                             Text($0.category)
                                 .tag($0.category)
                             
                         }
                     }
-                    .pickerStyle(MenuPickerStyle())
+                    .pickerStyle(SegmentedPickerStyle())
                     .padding()
 
 DatePicker(selection: $dueDate, displayedComponents: .date) {
@@ -125,25 +130,26 @@ DatePicker(selection: $dueDate, displayedComponents: .date) {
 //                            .frame(width: 20, height: 20)
                             .foregroundColor(Color(uiColor: .gray))
 //                            .shadow(color: .indigo.opacity(0.3), radius: 10, x: 0, y: 10)
-                            .padding()
+//                            .padding()
                     }.padding()
                     Spacer(minLength: 100.0).padding()
                     Spacer()
                     Button(role: .none, action: {
-                        
-                        ViewContextMethods.addItem(context: viewContext, dueDate: dueDate, toDoText: toDoText, category: category)
-                        withAnimation {
-                            newItemOpen = false
-                        }
-                    }, label: {
+                        if (!(toDoText == "" || category == "")){
+                            ViewContextMethods.addItem(context: viewContext, dueDate: dueDate, toDoText: toDoText, category: category)
+                            withAnimation {
+                                newItemOpen = false
+                                }
+                            }
+                        }, label: {
                         HStack {
                             Text("Add")
                             
                         }
-                        .frame(maxWidth: .infinity)
+                        
                     })
                     //    .buttonStyle(BorderedButtonStyle)
-                        .tint(.indigo)
+                        .tint(.blue)
 //                        .controlProminence(.increased)
                         .controlSize(.large)
                         .shadow(color: Color.black.opacity(0.1), radius: 20, x: 5, y: 10)
@@ -151,7 +157,8 @@ DatePicker(selection: $dueDate, displayedComponents: .date) {
                         .shadow(color: Color.white.opacity(1), radius: 5, x: -1, y: -1)
                         .padding()
                 }
-//                .matchedGeometryEffect(id: "button", in: namespace)
+              
+                .matchedGeometryEffect(id: "button", in: namespace)
                 
                 Spacer()
             }

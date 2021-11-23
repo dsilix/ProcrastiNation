@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49458730274D3AA60032FCC9 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945872F274D3AA60032FCC9 /* LandingView.swift */; };
 		4A6ECF7A2742ACBF0097A981 /* ProcrastiNationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6ECF792742ACBF0097A981 /* ProcrastiNationApp.swift */; };
 		4A6ECF7C2742ACBF0097A981 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6ECF7B2742ACBF0097A981 /* ContentView.swift */; };
 		4A6ECF7E2742ACC10097A981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6ECF7D2742ACC10097A981 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4945872F274D3AA60032FCC9 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		4A6ECF762742ACBF0097A981 /* ProcrastiNation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProcrastiNation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6ECF792742ACBF0097A981 /* ProcrastiNationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcrastiNationApp.swift; sourceTree = "<group>"; };
 		4A6ECF7B2742ACBF0097A981 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				4A6ECF7D2742ACC10097A981 /* Assets.xcassets */,
 				4AA6C53D2747EA48002DF720 /* Models */,
 				4A6ECF7F2742ACC10097A981 /* Preview Content */,
+				4945872F274D3AA60032FCC9 /* LandingView.swift */,
 			);
 			path = ProcrastiNation;
 			sourceTree = "<group>";
@@ -266,7 +269,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4A6ECF712742ACBF0097A981 /* Build configuration list for PBXProject "ProcrastiNation" */;
+			buildConfigurationList = 4A6ECF712742ACBF0097A981 /* Build configuration list for PBXProject "LaunchProcrastination" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -323,6 +326,7 @@
 				4AA6C54A2747EB0D002DF720 /* CategoryCards.swift in Sources */,
 				4AA6C54F2747EC75002DF720 /* ProcrastiNation.xcdatamodeld in Sources */,
 				4AA6C5382747E9FD002DF720 /* NewItem.swift in Sources */,
+				49458730274D3AA60032FCC9 /* LandingView.swift in Sources */,
 				4A6ECF7C2742ACBF0097A981 /* ContentView.swift in Sources */,
 				4AA6C54C2747EBF5002DF720 /* Collection.swift in Sources */,
 				4AA6C5362747E9D5002DF720 /* MainScreen.swift in Sources */,
@@ -501,6 +505,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchProcrastination;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -531,6 +536,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchProcrastination;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -646,7 +652,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A6ECF712742ACBF0097A981 /* Build configuration list for PBXProject "ProcrastiNation" */ = {
+		4A6ECF712742ACBF0097A981 /* Build configuration list for PBXProject "LaunchProcrastination" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A6ECF982742ACC10097A981 /* Debug */,

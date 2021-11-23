@@ -17,7 +17,7 @@
                BlueprintIdentifier = "4A6ECF752742ACBF0097A981"
                BuildableName = "ProcrastiNation.app"
                BlueprintName = "ProcrastiNation"
-               ReferencedContainer = "container:ProcrastiNation.xcodeproj">
+               ReferencedContainer = "container:LaunchProcrastination.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "4A6ECF852742ACC10097A981"
                BuildableName = "ProcrastiNationTests.xctest"
                BlueprintName = "ProcrastiNationTests"
-               ReferencedContainer = "container:ProcrastiNation.xcodeproj">
+               ReferencedContainer = "container:LaunchProcrastination.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "4A6ECF8F2742ACC10097A981"
                BuildableName = "ProcrastiNationUITests.xctest"
                BlueprintName = "ProcrastiNationUITests"
-               ReferencedContainer = "container:ProcrastiNation.xcodeproj">
+               ReferencedContainer = "container:LaunchProcrastination.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -67,7 +67,7 @@
             BlueprintIdentifier = "4A6ECF752742ACBF0097A981"
             BuildableName = "ProcrastiNation.app"
             BlueprintName = "ProcrastiNation"
-            ReferencedContainer = "container:ProcrastiNation.xcodeproj">
+            ReferencedContainer = "container:LaunchProcrastination.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -84,7 +84,7 @@
             BlueprintIdentifier = "4A6ECF752742ACBF0097A981"
             BuildableName = "ProcrastiNation.app"
             BlueprintName = "ProcrastiNation"
-            ReferencedContainer = "container:ProcrastiNation.xcodeproj">
+            ReferencedContainer = "container:LaunchProcrastination.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

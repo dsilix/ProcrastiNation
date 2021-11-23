@@ -68,7 +68,7 @@ struct MainScreen: View {
                                 
                             }
                             .padding(.top, 30)
-                            .background(Color("customBlack"))
+                            
                             
                             // MARK: Actual list of todo items
                             VStack {
@@ -138,7 +138,7 @@ struct MainScreen: View {
                                     
                                 }
                             }
-                        }.background(Color("customBlack")).opacity(1)
+                        }
                         
                         // MARK: Bottom button to add new item
                         VStack{
@@ -177,7 +177,7 @@ struct MainScreen: View {
                         //Haptics.giveSmallHaptic()
                     })
                         {
-                        Image("1")
+                        Image("")
                             .foregroundColor(Color.gray)
                     }
                             .buttonStyle(PlainButtonStyle()),
