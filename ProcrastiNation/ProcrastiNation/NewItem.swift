@@ -4,7 +4,6 @@
 //
 //  Created by Silvio Saturno on 19/11/21.
 //
-
 import SwiftUI
 import Combine
 
@@ -62,7 +61,7 @@ struct NewItem: View {
                     .pickerStyle(MenuPickerStyle())
                     .padding()
 
-                    DatePicker(selection: $dueDate, displayedComponents: .date) {
+DatePicker(selection: $dueDate, displayedComponents: .date) {
                         Text("Due date")
                         
                     }
@@ -100,27 +99,7 @@ struct NewItem: View {
                     .padding(.horizontal, 30)
                     
                     
-                    Button(role: .none, action: {
-                        
-                        ViewContextMethods.addItem(context: viewContext, dueDate: dueDate, toDoText: toDoText, category: category)
-                        withAnimation {
-                            newItemOpen = false
-                        }
-                    }, label: {
-                        HStack {
-                            Text("New task ")
-                            Image(systemName: "chevron.up")
-                        }
-                        .frame(maxWidth: .infinity)
-                    })
-                    //    .buttonStyle(BorderedButtonStyle)
-                        .tint(.indigo)
-//                        .controlProminence(.increased)
-                        .controlSize(.large)
-                        .shadow(color: Color.black.opacity(0.1), radius: 20, x: 5, y: 10)
-                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 1, y: 1)
-                        .shadow(color: Color.white.opacity(1), radius: 5, x: -1, y: -1)
-                        .padding()
+                    
                     
                 }
                 .padding(.top, 100)
@@ -134,21 +113,45 @@ struct NewItem: View {
             
             VStack{
                 HStack{
-                    Spacer()
+//                    Spacer()
                     Button(action: {
                         withAnimation {
                             newItemOpen = false
                         }
                     }) {
-                        Image(systemName: "x.square")
-                            .resizable()
-                            .frame(width: 20, height: 20)
+                        Text("Cancel")
+//                            .padding(.trailing, 320.0)
+//                            .resizable()
+//                            .frame(width: 20, height: 20)
                             .foregroundColor(Color(uiColor: .gray))
-                            .shadow(color: .indigo.opacity(0.3), radius: 10, x: 0, y: 10)
+//                            .shadow(color: .indigo.opacity(0.3), radius: 10, x: 0, y: 10)
                             .padding()
-                    }
+                    }.padding()
+                    Spacer(minLength: 100.0).padding()
+                    Spacer()
+                    Button(role: .none, action: {
+                        
+                        ViewContextMethods.addItem(context: viewContext, dueDate: dueDate, toDoText: toDoText, category: category)
+                        withAnimation {
+                            newItemOpen = false
+                        }
+                    }, label: {
+                        HStack {
+                            Text("Add")
+                            
+                        }
+                        .frame(maxWidth: .infinity)
+                    })
+                    //    .buttonStyle(BorderedButtonStyle)
+                        .tint(.indigo)
+//                        .controlProminence(.increased)
+                        .controlSize(.large)
+                        .shadow(color: Color.black.opacity(0.1), radius: 20, x: 5, y: 10)
+                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 1, y: 1)
+                        .shadow(color: Color.white.opacity(1), radius: 5, x: -1, y: -1)
+                        .padding()
                 }
-                .matchedGeometryEffect(id: "button", in: namespace)
+//                .matchedGeometryEffect(id: "button", in: namespace)
                 
                 Spacer()
             }
@@ -156,8 +159,8 @@ struct NewItem: View {
         
         
     }
-    
-    func textChanged(upper: Int, text: inout String) {
+
+func textChanged(upper: Int, text: inout String) {
         if text.count > upper {
             text = String(text.prefix(upper))
         }

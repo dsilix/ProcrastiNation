@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 
+
 struct MainScreen: View {
     @Environment(\.managedObjectContext) var viewContext
     
@@ -26,8 +27,9 @@ struct MainScreen: View {
     
     @State var newItemOpen = false
     @State var settingsOpen = false
-    
+    @State private var punt1 = UserDefaults.standard.integer(forKey: "Point")
     @Binding var menuOpen: Bool
+    
     
     
 //    @AppStorage("userName") var userName = ""
@@ -175,13 +177,15 @@ struct MainScreen: View {
                         //Haptics.giveSmallHaptic()
                     })
                         {
-                        Image("")
+                        Image("1")
                             .foregroundColor(Color.gray)
                     }
                             .buttonStyle(PlainButtonStyle()),
                         trailing: Button(action: {
                         withAnimation {
                             newItemOpen.toggle()
+                            punt1 += 100
+                            UserDefaults.standard.set(self.punt1, forKey: "Point")
                         }
                         Haptics.giveSmallHaptic()
                     }) {

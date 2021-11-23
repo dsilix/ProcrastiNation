@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 //CLASSE CHE GESTISCE IL PUNTEGGIO.
 class punti {
     var punteggio : Int
@@ -70,12 +69,14 @@ var monster8 = monster(imageMonster: "8", opac: 0, dim:0.2)
 var monster9 = monster(imageMonster: "9", opac: 0, dim:0.2)
 
 
-var points = punti(punteggio: 0)
+
 
 struct Collection: View {
     
    
-  
+    
+    
+    var points = punti(punteggio: 0)
     //CREO TRE COLONNE PER LA LAZYGRID
     let columns = [
         GridItem(.flexible()),
@@ -91,7 +92,7 @@ struct Collection: View {
     }
 
     var body: some View {
-       
+        
         //ARRAY OGGETTI MOSTRO
         let mostri = [monster1,
                       monster2,
