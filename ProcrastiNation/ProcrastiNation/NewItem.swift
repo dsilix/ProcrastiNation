@@ -29,6 +29,7 @@ struct NewItem: View {
                     Text("Priority")
                         .font(.body.smallCaps())
                         .foregroundColor(.secondary)
+                        .opacity(0.8)
                         
                     Picker(selection: $category,
                            label:
@@ -64,10 +65,10 @@ struct NewItem: View {
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
-                    .padding()
+                    .padding([.leading, .bottom, .trailing])
 
 DatePicker(selection: $dueDate, displayedComponents: .date) {
-                        Text("Due date")
+                        Text("Deadline")
                         
                     }
                     .padding(.horizontal)
@@ -78,9 +79,12 @@ DatePicker(selection: $dueDate, displayedComponents: .date) {
                     ZStack(alignment: .leading) {
                         if toDoText.isEmpty {
                             VStack(alignment: .leading) {
-                                Text("Enter your todo item")
+                                Text("Description")
                                     .font(Font.body)
                                     .foregroundColor(Color.gray)
+                                    
+                                    
+                                    
                                 Spacer()
                             }
                             .padding(.vertical, 12)
@@ -128,7 +132,7 @@ DatePicker(selection: $dueDate, displayedComponents: .date) {
 //                            .padding(.trailing, 320.0)
 //                            .resizable()
 //                            .frame(width: 20, height: 20)
-                            .foregroundColor(Color(uiColor: .gray))
+//                            .foregroundColor(Color(uiColor: .systemIndigo))
 //                            .shadow(color: .indigo.opacity(0.3), radius: 10, x: 0, y: 10)
 //                            .padding()
                     }.padding()
