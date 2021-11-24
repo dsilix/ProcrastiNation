@@ -29,7 +29,7 @@ struct ToDoList: View {
                                 .frame(maxWidth: .infinity)
                         }
                         .toggleStyle(.button)
-                        .tint(.indigo)
+                        .tint(.orange)
                         .clipShape(Capsule())
                         .animation(.easeInOut, value: notDoneOnly)
                     }
@@ -57,7 +57,7 @@ struct ToDoList: View {
                                 .padding(.bottom, 5)
                                 
                                 HStack{
-                                    Text("Due: \(item.dueDate!, formatter: itemFormatter)")
+                                    Text("Deadline: \(item.dueDate!, formatter: itemFormatter)")
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                     Spacer()
@@ -121,7 +121,7 @@ struct ToDoList: View {
                 $0.category == toDoItem.category
             }
         }
-        return Color.cyan
+        return Color.orange
     }
     
     

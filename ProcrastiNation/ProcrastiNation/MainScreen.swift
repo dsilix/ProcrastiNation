@@ -36,7 +36,7 @@ struct MainScreen: View {
 //
     var body: some View {
         ZStack {
-            if !newItemOpen {
+//            if !newItemOpen {
                 NavigationView {
                     ZStack {
                         ScrollView {
@@ -182,11 +182,11 @@ struct MainScreen: View {
                     }
                             .buttonStyle(PlainButtonStyle()),
                         trailing: Button(action: {
-                        withAnimation {
+//                        withAnimation {
                             newItemOpen.toggle()
                             punt1 += 100
                             UserDefaults.standard.set(self.punt1, forKey: "Point")
-                        }
+//                        }
                         Haptics.giveSmallHaptic()
                     }) {
                         Image(systemName: "plus")
@@ -197,13 +197,17 @@ struct MainScreen: View {
                     }
                             .buttonStyle(PlainButtonStyle())
                             .sheet(isPresented: $settingsOpen, onDismiss: {settingsOpen = false}) {Settings()}
+                            .sheet(isPresented: $newItemOpen, onDismiss: {newItemOpen = false})
+                        {
+                            NewItem(namespace: namespace, newItemOpen: $newItemOpen)
+                        }
                     )
                 }
                 
                 // MARK: New item view
-            } else {
-                NewItem(namespace: namespace, newItemOpen: $newItemOpen)
-            }
+//            } else {
+//                NewItem(namespace: namespace, newItemOpen: $newItemOpen)
+//            }
         }
     }
     

@@ -125,7 +125,7 @@ var monster10 = monster(imageMonster: "10", opac: 0, dim:0.2, on1: false)
 struct Collection: View {
 
     @State var verticaloffsetmonster = 2.0
-    var points = punti(punteggio: 500)
+    var points = punti(punteggio: 200)
     //CREO TRE COLONNE PER LA LAZYGRID
     let columns = [
         GridItem(.flexible()),
@@ -174,7 +174,7 @@ struct Collection: View {
                     Image(mostri[index].imageMonster)
                         .scaleEffect(mostri[index].dim)
                         .opacity(mostri[index].opac)
-                        .padding(-104)
+                        .padding(-115)
                         .offset(y: verticaloffsetmonster)
                         .animation(Animation.linear.repeatForever())
                 }
@@ -187,9 +187,9 @@ struct Collection: View {
             LazyVGrid(columns: columns, spacing: 0){
                 ForEach(0..<9) { index in
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color("customOrange")).opacity(0.6).frame(width: 120, height: 120)
-//                        .shadow(radius: 10)
-                       .padding(75)
+                        .foregroundColor(Color.white).opacity(0.6).frame(width: 110, height: 100)
+                        .shadow(radius: 5)
+                       .padding(76)
                 }
             }
         }.zIndex(0)

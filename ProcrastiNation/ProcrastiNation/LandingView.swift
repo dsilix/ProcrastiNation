@@ -14,8 +14,16 @@ struct LandingView: View {
         ZStack{
             Color.white.ignoresSafeArea()
             VStack{
-                Text("ProcrastiNation").font(.largeTitle).fontWeight(.bold).foregroundColor(Color("customOrange")).bold()
-                Image("3").rotationEffect(Angle(degrees: imagerotation))
+                HStack{
+                Text("Procrasti").font(.largeTitle).fontWeight(.bold).foregroundColor(Color("customOrange")).bold()
+                        .padding(-10)
+                    Text("Nation").font(.largeTitle).fontWeight(.bold).foregroundColor(Color("customBlack")).bold()
+                    
+                }
+                Image("icon").resizable()
+                    .frame(width: 200, height: 200)
+                    .padding(30)
+                    .rotationEffect(Angle(degrees: imagerotation))
                     .offset(y:verticaloffset).animation(Animation.linear.repeatForever())
             }.onAppear(perform: {
                 verticaloffset = -2.0
