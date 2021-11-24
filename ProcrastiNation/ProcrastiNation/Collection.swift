@@ -96,8 +96,10 @@ class monster {
     }
     func uovo(){
         if self.on1 == false {
-            self.imageMonster = "9"
+            self.imageMonster = "10"
             self.opac=1.0
+            self.dim=0.25
+            
         }
         else{
             return
@@ -115,6 +117,7 @@ var monster6 = monster(imageMonster: "6", opac: 0, dim:0.2, on1: false)
 var monster7 = monster(imageMonster: "7", opac: 0, dim:0.2, on1: false)
 var monster8 = monster(imageMonster: "8", opac: 0, dim:0.2, on1: false)
 var monster9 = monster(imageMonster: "9", opac: 0, dim:0.2, on1: false)
+var monster10 = monster(imageMonster: "10", opac: 0, dim:0.2, on1: false)
 
 
 
@@ -122,7 +125,7 @@ var monster9 = monster(imageMonster: "9", opac: 0, dim:0.2, on1: false)
 struct Collection: View {
 
     @State var verticaloffsetmonster = 2.0
-    var points = punti(punteggio: 100)
+    var points = punti(punteggio: 500)
     //CREO TRE COLONNE PER LA LAZYGRID
     let columns = [
         GridItem(.flexible()),
